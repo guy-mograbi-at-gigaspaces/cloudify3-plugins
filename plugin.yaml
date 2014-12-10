@@ -5,7 +5,7 @@
 plugins:
   mogi:
     executor: central_deployment_agent
-    source: lib
+    source: https://github.com/cloudify-cosmo/cloudify-nodecellar-example/archive/master.zip
 
 
 node_types:
