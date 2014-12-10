@@ -1,0 +1,23 @@
+##############################################
+#               MY PLUGINS                   #
+##############################################
+
+plugins:
+  mogi:
+    executor: central_deployment_agent
+    source: lib
+
+
+node_types:
+  mogi.Echo:
+    derived_from: cloudify.nodes.Root
+    properties:
+      message:
+        default: 'show me the money'
+        description: >
+          Say what you want to the world
+    interfaces:
+      cloudify.interfaces.lifecycle:
+        create:
+          implementation: mogi.lib.echo.create
+
